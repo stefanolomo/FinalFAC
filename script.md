@@ -41,7 +41,7 @@ Los exponentes en doble precision, calculados con la formula presentada anterior
 
 #### Fraccion o mantisa
 
-La parte de la mantisa se encuentra codificada en binario sin signo, por lo que no recibe alteraciones cuando se cambia de formato (Simple <--> Doble)
+La parte de la mantisa se encuentra codificada en binario sin signo, por lo que no recibe alteraciones cuando se cambia de formato (Simple <--> Doble).
 
 ### Pasaje de decimal al estandar
 
@@ -73,3 +73,39 @@ donde:
 + "s" es el bit de signo. de manera que si es 0, el numero debe ser positivo entonces anula el factor -1; Y si es 1, el numero debe ser negativo entonces involucra el factor -1 en el producto.
 + "m" es la mantisa interpretada en decimal. Notar que se le antepone un entero 1,m ya que en el proceso de codificación ese 1 se transforma en bit implicito, siendo dejado fuera de la mantisa.
 + "e" es el exponente real. Esto quiere decir que es el exponente interpretado en decimal y des-sesgado de manera correspondiente ($2^{\(n-1)} - 1$).
+
+### Ejemplos practicos de pasaje entre sistemas
+
+#### Decimal a IEEE754
+
+1) Pasar 12,375 al estandar.
+
++ Primero, notamos que el numero es positivo. Debido a esto, sabemos que S=0.
++ Ahora, necesitamos pasar 12,375 a binario con punto fijo. Trabajaremos con las partes enteras (12) y fraccionaria (0,375) por separado:
+	+ $12_{10} = 1100_{2}$
+	+ $0,375_{10} = 3/8_{10} = (2/8 + 1/8)\_{10} = (1/4 + 1/8)_{10} = (2^{-2} + 2^{-3})\_{10} = 0,011\_{2}$
++ Si juntamos las partes tenemos que: $12,375_{10} = 1100,011_{2}$
+	+ Necesitamos que en la parte entera quede solo un 1 para que se considere al numero normalizado.
+	+ Multiplicamos al numero por la potencia de 2 necesaria para correr la coma hasta el lugar deseado: $1100,011 \times 2³ = 1,100011$
++ De esta manera, tenemos que la mantisa va a ser la parte fraccionaria de este numero binario: $100011$
++ Por otra parte, el exponente va a ser la potencia de 2 que empleamos para normalizar el numero, en este caso es 3. Como mencionamos, debemos sesgar la potencia sumandole 127 ya que estamos en simple precision: $(3+127)_{10} = 130\_{10} = (1000 0010)\_{2}$
++ Ya tenemos todas las partes de nuestro numero decimal codificado en el estandar IEEE754:
+	+ S: 0
+	+ E: 1000 0010
+	+ M: 1000 1100 0000 0000 0000 000 (agregamos los ceros a la derecha que falten para llegar a 23 bits)
+	
+
+2) Pasar 5,75 al estandar.  
+
++ S=0
++ Calculamos binario de punto fijo
+	+ $5_{10} = 0101\_{2}$
+	+ $0,75_{10} = 3/4\_{10} = (2/4 + 1/4)\_{10} = (2^{-1} + 2^{-2})\_{10} = 0,11_{2}$
++ Tenemos que: $5,75_{10} = 0101,11\_{2}$
++ Normalizamos: $101,11 \times 2² = 1,0111$
++ La mantisa es $0111$
++ El exponente es $2+127 = 129 = 1000 0001_{2}$
++ El numero 5,75 en IEEE754 es
+	+ S: 0
+	+ E: 1000 0001
+	+ M: 0111 0000 0000 0000 0000 000
