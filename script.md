@@ -17,6 +17,32 @@ Tema: IEEE 754 - Historia y funcionamiento
 
 ### ¿Como se compone un numero en IEEE754?
 
+Un numero en IEEE754 se compone de 3 partes: El bit de signo (1 bit), el exponente (8 bits en simple precision, 11 bits en doble precision), y la mantisa (23 bits en simple precision, 52 bits en doble precision).
+
+![](images/sp_image.png)
+
+![](images/dp_image.png)
+
+#### Bit de signo
+
+El bit de signo es la parte que nos indica si el numero tiene que ser interpretado como positivo o negativo. Si es 0, es positivo. Si es 1, es negativo.
+
+#### Exponentes
+
+Los exponentes se encuentran sesgados por un exceso de $2^{\(n-1)} - 1$, donde n es la cantidad de bits del exponente. Como vimos, esto varia dependiendo del formato que se este usando: simple o doble precision.
+
+##### Exponente en simple precisión
+
+Los exponentes en simple precisión estan representados en un exceso de $2^{\(8-1)} - 1 = 2^{\(7)} - 1 = 127 $. De esta manera, si estamos en el proceso de pasar un decimal a IEEE 754 de precision simple, el exponente real que calculamos al normalizarlo debemos aumentarlo en 127 unidades decimales.
+
+##### Exponente en doble precisión
+
+Los exponentes en doble precision, calculados con la formula presentada anteriormente estan en un exceso de $2^{\(11-1)} - 1 = 2^{\(10)} - 1 = 1023 $. 
+
+#### Fraccion o mantisa
+
+La parte de la mantisa se encuentra codificada en binario sin signo, por lo que no recibe alteraciones cuando se cambia de formato (Simple <--> Doble)
+
 ### Pasaje de decimal al estandar
 
 El pasaje de un numero del sistema decimal al estandar IEEE754 se puede hacer siguiendo distintos pasos. En terminos generales, se debe:
@@ -39,7 +65,7 @@ El pasaje de un numero expresado mediante el estandar IEEE754 se realiza con los
 La siguiente formula nos ayuda a visualizar como se interpreta un numero decimal codificado con el estandar IEEE754:
 
 \begin{equation}
-(-1)^A \times (1,m) \times 2^{e}
+(-1)^s\times (1,m) \times 2^{e}
 \end{equation}
 
 donde:
