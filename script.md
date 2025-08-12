@@ -6,14 +6,26 @@ Tema: IEEE 754 - Historia y funcionamiento
 
 1. Introducción
 2. Historia
-3. ¿Como se compone un numero en IEEE754?
-4. Pasaje de un numero decimal al estandar
-5. Pasaje del estandar a decimal
-6. Suma con IEEE754 (?)
+3. Problemas que resulve
+4. ¿Como se compone un numero en IEEE754?
+5. Pasaje de un numero decimal al estandar
+6. Pasaje del estandar a decimal
 
 ### Introducción
 
 ### Historia
+
+#### ¿Qué es IEEE?
+
+El Institute of Electrical and Electronics Engineers (IEEE) es una organización profesional internacional dedicada al desarrollo y promoción de estándares técnicos en múltiples áreas de la ingeniería y la tecnología. Fundada en 1963, IEEE agrupa a ingenieros, científicos y profesionales para fomentar la innovación y el avance tecnológico.
+
+#### El estandar IEEE754
+
+Uno de los roles más importantes que cumplió IEEE es la estandarización de formatos y protocolos. En particular, IEEE fue fundamental en la creación del estándar IEEE 754, publicado en 1985. Este estandar define el formato y las reglas para la representación y manipulación de números en punto flotante en las computadoras.
+
+Gracias a IEEE, el estándar IEEE 754 se convirtió en la base para la mayoría de los procesadores y lenguajes de programación modernos, asegurando resultados consistentes y fiables en cálculos científicos y financieros.
+
+### Problemas que resulve
 
 ### ¿Como se compone un numero en IEEE754?
 
@@ -109,3 +121,16 @@ donde:
 	+ S: 0
 	+ E: 1000 0001
 	+ M: 0111 0000 0000 0000 0000 000
+	
+---
+
+Fuentes / Software utilizado:
+
++ [IEEE](https://www.ieee.org)
++ [Slidesgo Themes](slidesgo.com)
++ [Google Slides](https://workspace.google.com/products/slides/)
++ [Floating Point Numbers - youtube.com](https://youtu.be/PZRI1IfStY0)
++ [Markdown](https://www.markdownguide.org/)
++ [GhostWriter](https://ghostwriter.kde.org/)
++ [$\LaTeX$](https://www.latex-project.org/)
++ [Open shot](https://www.openshot.org/)
