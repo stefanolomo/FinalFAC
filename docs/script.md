@@ -64,11 +64,11 @@ El bit de signo es la parte que nos indica si el numero tiene que ser interpreta
 
 #### Exponentes
 
-Los exponentes se encuentran sesgados por un exceso de $2^{\(n-1)} - 1$, donde n es la cantidad de bits del exponente. Como vimos, esto varia dependiendo del formato que se este usando: simple o doble precision.
+Los exponentes se encuentran sesgados por un exceso de $2^{(n-1)} - 1$, donde n es la cantidad de bits del exponente. Como vimos, esto varia dependiendo del formato que se este usando: simple o doble precision.
 
 ##### Exponente en simple precisión
 
-Los exponentes en simple precisión estan representados en un exceso de $2^{\(8-1)} - 1 = 2^{\(7)} - 1 = 127 $. De esta manera, si estamos en el proceso de pasar un decimal a IEEE 754 de precision simple, el exponente real que calculamos al normalizarlo debemos aumentarlo en 127 unidades decimales.
+Los exponentes en simple precisión estan representados en un exceso de $2^{(8-1)} - 1 = 2^{(7)} - 1 = 127$. De esta manera, si estamos en el proceso de pasar un decimal a IEEE 754 de precision simple, el exponente real que calculamos al normalizarlo debemos aumentarlo en 127 unidades decimales.
 
 ##### Exponente en doble precisión
 
