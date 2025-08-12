@@ -1,3 +1,7 @@
+---
+title: Mi Script
+---
+
 # Guión del video final
 
 Tema: IEEE 754 - Historia y funcionamiento
