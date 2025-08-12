@@ -6,7 +6,7 @@ Tema: IEEE 754 - Historia y funcionamiento
 
 1. Introducción
 2. Historia
-3. Problemas que resulve
+3. ¿Como se compone un numero en IEEE754?
 4. Pasaje de un numero decimal al estandar
 5. Pasaje del estandar a decimal
 6. Suma con IEEE754 (?)
@@ -15,8 +15,25 @@ Tema: IEEE 754 - Historia y funcionamiento
 
 ### Historia
 
-### Problemas que resulve
+### ¿Como se compone un numero en IEEE754?
 
 ### Pasaje de decimal al estandar
 
+El pasaje de un numero del sistema decimal al estandar IEEE754 se puede hacer siguiendo distintos pasos. En terminos generales, se debe:
+
++ Establecer el valor del bit de signo
++ Establecer el valor del decimal en binario con punto fijo
++ Normalizar, "Correr la coma" en el número
++ Determinar el exponente sesgado
++ Organizar en la disposicion del estandar
+
 ### Pasaje del estandar a decimal
+
+El pasaje de un numero expresado mediante el estandar IEEE754 se realiza con los siguientes pasos: 
+
++ Interpretar el bit de signo
++ Interpretar el exponente y transformarlo en exponente real
++ Interpretar la mantisa
++ Posicionar el numero y calcularlo en decimal
+
+
