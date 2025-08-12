@@ -36,4 +36,14 @@ El pasaje de un numero expresado mediante el estandar IEEE754 se realiza con los
 + Interpretar la mantisa
 + Posicionar el numero y calcularlo en decimal
 
+La siguiente formula nos ayuda a visualizar como se interpreta un numero decimal codificado con el estandar IEEE754:
 
+\begin{equation}
+(-1)^A \times (1,m) \times 2^{e}
+\end{equation}
+
+donde:
+
++ "s" es el bit de signo. de manera que si es 0, el numero debe ser positivo entonces anula el factor -1; Y si es 1, el numero debe ser negativo entonces involucra el factor -1 en el producto.
++ "m" es la mantisa interpretada en decimal. Notar que se le antepone un entero 1,m ya que en el proceso de codificación ese 1 se transforma en bit implicito, siendo dejado fuera de la mantisa.
++ "e" es el exponente real. Esto quiere decir que es el exponente interpretado en decimal y des-sesgado de manera correspondiente ($2^{\(n-1)} - 1$).
