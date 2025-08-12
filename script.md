@@ -25,7 +25,26 @@ Uno de los roles más importantes que cumplió IEEE es la estandarización de fo
 
 Gracias a IEEE, el estándar IEEE 754 se convirtió en la base para la mayoría de los procesadores y lenguajes de programación modernos, asegurando resultados consistentes y fiables en cálculos científicos y financieros.
 
+
+
 ### Problemas que resulve
+
+### Problemas que resuelve
+
+El estándar IEEE 754 fue creado para resolver varios problemas importantes que surgían al representar números decimales en las computadoras usando formatos binarios y aritmética de punto flotante:
+
+1. **Inconsistencia en la representación de números reales:** Antes de IEEE 754, no existía un estándar unificado, por lo que distintos procesadores y lenguajes de programación usaban formatos propios para almacenar números en punto flotante. Esto provocaba resultados diferentes al realizar cálculos idénticos en distintas máquinas o programas.
+
+2. **Falta de precisión y errores acumulativos:** Los cálculos con números en punto flotante suelen tener errores por redondeo. IEEE 754 define reglas claras para redondeos, manejo de excepciones y representación de números especiales, minimizando errores y mejorando la precisión en operaciones sucesivas.
+
+3. **Representación de valores especiales:** El estándar permite codificar valores como cero positivo y negativo, infinitos (positivo y negativo) y el valor especial NaN (Not a Number), que representan resultados indefinidos o errores en cálculos, facilitando el manejo de casos excepcionales en software y hardware.
+
+4. **Diferentes rangos y precisión para distintas aplicaciones:** Al definir formatos de simple y doble precisión (y otros), IEEE 754 ofrece flexibilidad para distintos niveles de precisión y rango de números, optimizando el uso de memoria según la necesidad del cálculo.
+
+5. **Facilitar la portabilidad y consistencia de resultados:** Gracias a la estandarización, programas escritos para un sistema pueden funcionar en otro sin cambios en el resultado de cálculos numéricos, haciendo posible el desarrollo de software confiable y portable.
+
+6. **Mejora en performance:** Al estandarizar la representación y las operaciones en hardware específico para punto flotante, se consigue una mejora significativa en la velocidad y eficiencia de los cálculos comparado con interpretarlos mediante software, lo que es fundamental para aplicaciones que requieren procesamiento rápido y masivo de datos numéricos de punto flotante.
+
 
 ### ¿Como se compone un numero en IEEE754?
 
@@ -107,7 +126,7 @@ donde:
 	+ M: 1000 1100 0000 0000 0000 000 (agregamos los ceros a la derecha que falten para llegar a 23 bits)
 	
 
-2) Pasar 5,75 al estandar.  
+2) Pasar 5,75 al estandar.
 
 + S=0
 + Calculamos binario de punto fijo
