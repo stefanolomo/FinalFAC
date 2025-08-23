@@ -29,10 +29,6 @@ Uno de los roles más importantes que cumplió IEEE es la estandarización de fo
 
 Gracias a IEEE, el estándar IEEE 754 se convirtió en la base para la mayoría de los procesadores y lenguajes de programación modernos, asegurando resultados consistentes y fiables en cálculos científicos y financieros.
 
-
-
-### Problemas que resulve
-
 ### Problemas que resuelve
 
 El estándar IEEE 754 fue creado para resolver varios problemas importantes que surgían al representar números decimales en las computadoras usando formatos binarios y aritmética de punto flotante:
@@ -72,7 +68,7 @@ Los exponentes en simple precisión estan representados en un exceso de $2^{(8-1
 
 ##### Exponente en doble precisión
 
-Los exponentes en doble precision, calculados con la formula presentada anteriormente estan en un exceso de $2^{\(11-1)} - 1 = 2^{\(10)} - 1 = 1023 $. 
+Los exponentes en doble precision, calculados con la formula presentada anteriormente estan en un exceso de $2^{\(11-1)} - 1 = 2^{\(10)} - 1 = 1023 $.
 
 #### Fraccion o mantisa
 
@@ -90,7 +86,7 @@ El pasaje de un numero del sistema decimal al estandar IEEE754 se puede hacer si
 
 ### Pasaje del estandar a decimal
 
-El pasaje de un numero expresado mediante el estandar IEEE754 se realiza con los siguientes pasos: 
+El pasaje de un numero expresado mediante el estandar IEEE754 se realiza con los siguientes pasos:
 
 + Interpretar el bit de signo
 + Interpretar el exponente y transformarlo en exponente real
@@ -128,7 +124,7 @@ donde:
 	+ S: 0
 	+ E: 1000 0010
 	+ M: 1000 1100 0000 0000 0000 000 (agregamos los ceros a la derecha que falten para llegar a 23 bits)
-	
+
 
 2) Pasar 5,75 al estandar.
 
@@ -144,7 +140,7 @@ donde:
 	+ S: 0
 	+ E: 1000 0001
 	+ M: 0111 0000 0000 0000 0000 000
-	
+
 ---
 
 Fuentes / Software utilizado:
